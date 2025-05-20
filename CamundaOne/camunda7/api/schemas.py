@@ -1,0 +1,1 @@
+# Placeholder: Pydantic schemas for Camunda 7 API

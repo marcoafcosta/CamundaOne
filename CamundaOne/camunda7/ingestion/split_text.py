@@ -1,0 +1,1 @@
+# Placeholder: split Camunda 7 docs into chunks
