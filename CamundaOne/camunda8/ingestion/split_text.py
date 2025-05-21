@@ -1,1 +1,0 @@
-# Placeholder: split Camunda 8 docs into chunks

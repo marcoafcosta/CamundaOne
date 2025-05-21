@@ -1,1 +1,0 @@
-# Placeholder: download Camunda 7 docs

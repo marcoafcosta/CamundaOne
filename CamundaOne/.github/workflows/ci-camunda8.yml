@@ -1,3 +1,0 @@
-name: CI Camunda8
-on: [push, pull_request]
-jobs: {}
