@@ -1,98 +1,139 @@
-CamundaOne GPT
+# CamundaOne GPT
 
-This knowledge base empowers Camunda GPT with full support for Camunda 8, DMN, and the FEEL (Friendly Enough Expression Language), enabling comprehensive model creation/review/update workflows compatible with Camunda Web & Desktop Modeler.
+[![Build Status](https://github.com/marcoafcosta/CamundaOne/actions/workflows/ci.yml/badge.svg)](https://github.com/marcoafcosta/CamundaOne/actions)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-Key Features
+> A comprehensive toolkit for **Camunda 8**, **DMN**, and **FEEL**, powered by GPT-driven prompts and examples.
 
-Camunda 8: Quickstart, Architecture, Best Practices
+---
 
-BPMN/DMN/CMMN: Create, Review, Update via GPT prompts
+## 📋 Table of Contents
+1. [Features](#features)  
+2. [Quickstart](#quickstart)  
+3. [Usage](#usage)  
+4. [Documentation](#documentation)  
+5. [Examples](#examples)  
+6. [Prompts](#prompts)  
+7. [Quizzes](#quizzes)  
+8. [Contributing](#contributing)  
+9. [License](#license)  
 
-FEEL: Fundamentals documentation, literal expression support, DMN examples, GPT prompts for creating/reviewing/updating FEEL logic, and quizzes for FEEL basics
+---
 
-Modeler Compatibility: Examples validated in Desktop Modeler v5.35.0 and Web Modeler
+## ✨ Features
 
-Observability: OTEL, Jaeger, Prometheus configs
+- **Camunda 8**  
+  - Quickstart guide & architectural overview  
+  - Best practices: async patterns, incident handling, migration workflows  
+- **BPMN / DMN / CMMN**  
+  - GPT prompts for creating, reviewing, and updating tasks  
+  - Validated examples for Desktop & Web Modeler  
+- **FEEL**  
+  - In-depth fundamentals documentation (`docs/feel-fundamentals.md`)  
+  - DMN literal expressions & decision table examples  
+  - GPT prompts for FEEL logic generation & refinement  
+  - Interactive quizzes to master FEEL basics  
+- **Observability & Monitoring**  
+  - OTEL, Jaeger, Prometheus configuration snippets  
+- **Automated Quizzes**  
+  - Auto-generate and answer quizzes based on your models  
 
-Quizzes: Auto-generate and answer model-based quizzes
-CamundaOne GPT
+---
 
-CamundaOne GPT is a comprehensive knowledge base and toolkit for Camunda 8, DMN, and FEEL. It provides everything you need to create, review, and update BPMN, DMN, CMMN, and FEEL logic using GPT-driven prompts, fully compatible with both Camunda Web and Desktop Modeler.
+## 🚀 Quickstart
 
-🚀 Features
+### Prerequisites
+- **Git**  
+- **Camunda Desktop Modeler** v5.35.0+ or **Camunda Web Modeler**  
+- **Node.js & Python** (for example scripts)
 
-Camunda 8
+### Installation
 
-Quickstart guide and architectural overview
+```bash
+# Clone the repository
+git clone https://github.com/marcoafcosta/CamundaOne.git
+cd CamundaOne
 
-Best practices for async patterns, incident handling, and migration
-
-BPMN / DMN / CMMN
-
-GPT prompts to create, review, and update process, decision, and case models
-
-Example files validated in Modeler v5.35.0 and Web Modeler
-
-FEEL (Friendly Enough Expression Language)
-
-In-depth FEEL fundamentals documentation
-
-Literal expression support and DMN examples
-
-GPT prompts for generating, reviewing, and updating FEEL expressions
-
-Interactive quizzes to master FEEL basics
-
-Observability & Monitoring
-
-OTEL, Jaeger, and Prometheus configuration examples
-
-Automated Quizzes
-
-Auto-generate and answer quizzes based on your models
-
-📦 Getting Started
-
-Extract Sources
-
+# Extract and clean up source files
 scripts/unzip-and-clean.sh
+```
 
-Compatibility
+---
 
-See docs/modeler-compatibility.md for import guidelines.
+## 🛠️ Usage
 
-Try Examples
+1. **Open in Modeler**  
+   - **BPMN**: `examples/gateway-routing.bpmn`  
+   - **DMN + FEEL**: `examples/feel-example.dmn`  
+2. **Generate New Artifacts**  
+   - **BPMN**: follow `prompts/create-bpmn.md`  
+   - **FEEL**: follow `prompts/create-feel.md`  
+3. **Review & Update**  
+   - Use **Review** prompts: `prompts/review-*.md`  
+   - Use **Update** prompts: `prompts/update-*.md`  
 
-Open examples/gateway-routing.bpmn for BPMN workflows.
+---
 
-Open examples/feel-example.dmn to explore FEEL in decision tables.
+## 📖 Documentation
 
-Generate with GPT Prompts
+Detailed guides in the `docs/` folder:
 
-Use prompts/create-bpmn.md to craft new BPMN diagrams.
+- **Camunda 8**  
+  - `docs/camunda-8-quickstart.md`  
+  - `docs/camunda-8-architecture.md`  
+- **Modeling**  
+  - `docs/best-practices-camunda-8.md`  
+  - `docs/integration-patterns.md`  
+  - `docs/migration-v7-to-v8.md`  
+- **FEEL**  
+  - `docs/feel-fundamentals.md`  
+- **Advanced Topics**  
+  - `docs/observability-otel.md`  
+  - `docs/async-and-incident-handling.md`  
 
-Use prompts/create-feel.md to produce FEEL expressions.
+---
 
-For detailed reference, browse the docs/ directory.
+## 📑 Examples
 
-📖 Documentation
+Explore working examples in the `examples/` directory:
 
-All guides, best practices, and reference materials are located under docs/:
+| File                               | Description        |
+|------------------------------------|--------------------|
+| `gateway-routing.bpmn`             | Sample BPMN workflow |
+| `example-decision.dmn`             | DMN decision table   |
+| `feel-example.dmn`                 | DMN + FEEL example   |
+| `external-task-worker.js`          | JavaScript worker    |
+| `operate-rest-query.py`            | Python REST client   |
 
-Foundation: docs/camunda-8-quickstart.md, docs/architecture.md
+---
 
-Modeling: docs/best-practices-camunda-8.md, docs/integration-patterns.md
+## 💬 Prompts
 
-FEEL: docs/feel-fundamentals.md
+Leverage GPT-driven prompts in the `prompts/` folder:
 
-Built with ❤️ for Camunda enthusiasts and power users.
+- **BPMN**: `prompts/create-bpmn.md`, `prompts/review-bpmn-c8.md`, `prompts/update-bpmn.md`  
+- **DMN**:  `prompts/create-dmn.md`,  `prompts/review-dmn-c8.md`,  `prompts/update-dmn.md`  
+- **FEEL**: `prompts/create-feel.md`, `prompts/review-feel.md`, `prompts/update-feel.md`  
 
-Run scripts/unzip-and-clean.sh to extract source into src/.
+---
 
-See docs/modeler-compatibility.md for import and compatibility guidelines.
+## 🎓 Quizzes
 
-Launch Camunda Desktop Modeler and open examples/gateway-routing.bpmn or examples/feel-example.dmn to test BPMN, DMN, and FEEL examples.
+Reinforce your skills with JSON quizzes in `quizzes/`:
 
-Use prompts/create-bpmn.md and prompts/create-feel.md to generate new .bpmn, .dmn, and FEEL expressions directly in the Modeler.
+- `quizzes/camunda8-basics.json`  
+- `quizzes/advanced-zeebe.json`  
+- `quizzes/feel-basics.json`  
 
-For detailed guides, refer to the docs/ directory.
+---
+
+## 🤝 Contributing
+
+Contributions are welcome!  
+Please read `CONTRIBUTING.md` for guidelines, open an issue, or submit a pull request.
+
+---
+
+## 📄 License
+
+This project is licensed under the [MIT License](LICENSE).
