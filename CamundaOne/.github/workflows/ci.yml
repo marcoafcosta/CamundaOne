@@ -1,0 +1,33 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  validate-models:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Validate BPMN files
+        run: |
+          find examples -name "*.bpmn" | xargs -n1 camunda-bpmn-lint
+      - name: Validate DMN files
+        run: |
+          find examples -name "*.dmn" | xargs -n1 camunda-dmn-lint
+      - name: Validate CMMN files
+        run: |
+          find examples -name "*.cmmn" | xargs -n1 camunda-cmmn-lint
+  validate-modeler-cli:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install Zeebe Modeler CLI
+        run: npm install -g @camunda/zeebe-modeler-cli
+      - name: Validate models via CLI
+        run: |
+          zeebe-modeler-cli validate examples/*.bpmn
+          zeebe-modeler-cli validate examples/*.dmn
+          zeebe-modeler-cli validate examples/*.cmmn

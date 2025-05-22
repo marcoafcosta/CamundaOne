@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" id="Definitions_1">
-  <bpmn:process id="Process_1" isExecutable="true">
-    <bpmn:startEvent id="StartEvent_1" name="Start"/>
-    <bpmn:task id="Task_1" name="Example Task"/>
-    <bpmn:endEvent id="EndEvent_1" name="End"/>
-  </bpmn:process>
-</bpmn:definitions>

@@ -1,0 +1,4 @@
+id: simple-process
+version: 1
+resources:
+  - simple-process.bpmn
