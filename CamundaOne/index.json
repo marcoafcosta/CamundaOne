@@ -1,0 +1,63 @@
+{
+  "files": [
+    { "path": "index.json",                  "type": "manifest" },
+    { "path": ".github/workflows/ci.yml",    "type": "ci" },
+
+    { "path": "docs/camunda-8-quickstart.md",           "type": "doc" },
+    { "path": "docs/camunda-8-architecture.md",         "type": "doc" },
+    { "path": "docs/zeebe-gateway.md",                  "type": "doc" },
+    { "path": "docs/operate-tasklist.md",               "type": "doc" },
+    { "path": "docs/integration-patterns.md",           "type": "doc" },
+    { "path": "docs/async-and-incident-handling.md",    "type": "doc" },
+    { "path": "docs/best-practices-camunda-8.md",       "type": "doc" },
+    { "path": "docs/observability-otel.md",             "type": "doc" },
+    { "path": "docs/migration-v7-to-v8.md",             "type": "doc" },
+    { "path": "docs/cmmn-fundamentals.md",              "type": "doc" },
+    { "path": "docs/modeling-diagrams.md",              "type": "doc" },
+    { "path": "docs/modeler-compatibility.md",          "type": "doc" },
+    { "path": "docs/forms-modeling.md",                 "type": "doc" },
+    { "path": "docs/quiz-guide.md",                     "type": "doc" },
+    { "path": "docs/feel-fundamentals.md",              "type": "doc" },
+
+    { "path": "examples/simple-process-zeebe.yaml",     "type": "example" },
+    { "path": "examples/gateway-routing.bpmn",           "type": "example" },
+    { "path": "examples/example-decision.dmn",           "type": "example" },
+    { "path": "examples/case-model.cmmn",                "type": "example" },
+    { "path": "examples/external-task-worker.js",        "type": "example" },
+    { "path": "examples/grpc-worker-go/main.go",         "type": "example" },
+    { "path": "examples/operate-rest-query.py",          "type": "example" },
+    { "path": "examples/tasklist-custom-form.html",      "type": "example" },
+    { "path": "examples/form-example.form",              "type": "example" },
+    { "path": "examples/form-linked-process.bpmn",       "type": "example" },
+    { "path": "examples/feel-example.dmn",               "type": "example" },
+
+    { "path": "prompts/create-bpmn.md",                  "type": "prompt" },
+    { "path": "prompts/review-bpmn-c8.md",               "type": "prompt" },
+    { "path": "prompts/update-bpmn.md",                  "type": "prompt" },
+    { "path": "prompts/create-dmn.md",                   "type": "prompt" },
+    { "path": "prompts/review-dmn-c8.md",                "type": "prompt" },
+    { "path": "prompts/update-dmn.md",                   "type": "prompt" },
+    { "path": "prompts/create-cmmn.md",                  "type": "prompt" },
+    { "path": "prompts/review-cmmn.md",                  "type": "prompt" },
+    { "path": "prompts/update-cmmn.md",                  "type": "prompt" },
+    { "path": "prompts/create-form.md",                  "type": "prompt" },
+    { "path": "prompts/review-form.md",                  "type": "prompt" },
+    { "path": "prompts/update-form.md",                  "type": "prompt" },
+    { "path": "prompts/debug-process-c8.md",             "type": "prompt" },
+    { "path": "prompts/quiz-master.md",                  "type": "prompt" },
+    { "path": "prompts/answer-quiz.md",                  "type": "prompt" },
+    { "path": "prompts/create-feel.md",                  "type": "prompt" },
+    { "path": "prompts/review-feel.md",                  "type": "prompt" },
+    { "path": "prompts/update-feel.md",                  "type": "prompt" },
+
+    { "path": "quizzes/camunda8-basics.json",            "type": "quiz" },
+    { "path": "quizzes/advanced-zeebe.json",             "type": "quiz" },
+    { "path": "quizzes/feel-basics.json",                "type": "quiz" },
+
+    { "path": "scripts/unzip-and-clean.sh",              "type": "script" },
+    { "path": "scripts/build-quiz.sh",                   "type": "script" },
+    { "path": "scripts/model-lint-and-update.sh",        "type": "script" },
+
+    { "path": "README.md",                               "type": "readme" }
+  ]
+}

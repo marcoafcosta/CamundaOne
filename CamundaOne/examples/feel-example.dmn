@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/DMN/20151101/dmn.xsd" id="feelExample" name="FEEL Example Decision Service">
+  <decision id="ExampleDecision" name="Example Decision">
+    <decisionTable id="Table">
+      <input id="InputAge">
+        <inputExpression id="ExpressionAge" typeRef="integer">
+          <text>Applicant age</text>
+        </inputExpression>
+      </input>
+      <output id="OutputEligibility" name="Eligibility" typeRef="string"/>
+      <rule id="Rule1">
+        <inputEntry id="InputEntry1"><text>age >= 18</text></inputEntry>
+        <outputEntry id="OutputEntry1"><text>"Eligible"</text></outputEntry>
+      </rule>
+      <rule id="Rule2">
+        <inputEntry id="InputEntry2"><text>age < 18</text></inputEntry>
+        <outputEntry id="OutputEntry2"><text>"Not eligible"</text></outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+</definitions>
