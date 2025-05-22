@@ -1,9 +1,0 @@
-###
-# Get all process definitions
-GET http://localhost:8080/engine-rest/process-definition
-
-###
-# Start a process instance
-POST http://localhost:8080/engine-rest/process-definition/key/InvoiceApproval/start
-Content-Type: application/json
-{} 
